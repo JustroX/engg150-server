@@ -50,7 +50,7 @@ JWT_SECRET=<passphrase for encrypting JWT session tokens>
 Since this server is built for demo purposes, there are some limitations outlined below:
 
 - Request validation is skipped. So, please follow this documentation properly as invalid requests will lead to undefined behaviour.
-- Only the `Users` and the `Auth` endpoints are authentication-gated. `Offer` and `Transaction` endpoints are left to make it easier to interact with the system during the demo.
+- Only the `Users` and the `Auth` endpoints are authentication-gated. `Offer` and `Transaction` endpoints are left ungated to make it easier to interact with the system during the demo.
 - The `Offer`'s `seller_id` and `buyer_id` need not be registered in the `User` collection. You can send random strings during the demo.
 
 ## Users
