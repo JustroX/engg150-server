@@ -18,7 +18,7 @@ export class AuthController {
         httpOnly: false,
         secure: false,
       })
-      .send();
+      .send({ access_token });
   }
 
   @Delete('logout')
