@@ -9,6 +9,16 @@ export class User {
   username: string;
   @Prop()
   password: string;
+
+  @Prop()
+  name: string;
+  @Prop()
+  email: string;
+
+  @Prop()
+  walletID: string;
+  @Prop()
+  mobile_number: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
