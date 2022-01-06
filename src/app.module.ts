@@ -5,9 +5,18 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { OfferModule } from './offer/offer.module';
+import { TransactionModule } from './transaction/transaction.module';
+import { config } from 'dotenv';
 
+config();
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/e150'), AuthModule, UserModule, OfferModule],
+  imports: [
+    MongooseModule.forRoot(process.env.MONGODB_URI),
+    AuthModule,
+    UserModule,
+    OfferModule,
+    TransactionModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
