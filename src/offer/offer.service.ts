@@ -14,12 +14,16 @@ export class OfferService {
     offer.seller = _offer.seller;
     offer.buyer = _offer.buyer;
     offer.amount = _offer.amount;
-    offer.timestamp = Date.now();
+    offer.createdAt = Date.now();
     await offer.save();
     return offer;
   }
 
   findOne(id: string) {
     return this.model.findById(id).exec();
+  }
+
+  getAll() {
+    return this.model.find();
   }
 }
