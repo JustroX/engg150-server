@@ -14,7 +14,7 @@ export class Offer {
   @Prop()
   amount: number;
   @Prop()
-  timestamp: number;
+  createdAt: number;
 }
 
 export const OfferSchema = SchemaFactory.createForClass(Offer);
